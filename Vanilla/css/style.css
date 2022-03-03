@@ -1,0 +1,35 @@
+.time_wrap {
+  position: relative;
+  width: 40rem;
+  margin: 0 auto;
+}
+
+.time_wrap .waketime {
+  width: 100%;
+  height: 20rem;
+  border: 1px solid #eee;
+  background: #f9f9f9;
+  border-radius: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 2rem;
+  gap: 1rem;
+}
+
+.time_wrap .waketime .time {
+  font-size: 4.2rem;
+  font-weight: bold;
+}
+
+.time_wrap .btn-check {
+  background: #9a91ec url(../img/camera.svg) no-repeat 50% 50%/3rem;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+}
