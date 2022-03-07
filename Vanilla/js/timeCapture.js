@@ -22,12 +22,13 @@
 		const minute = String(now.getMinutes()).padStart(2, "0");
 		const second = String(now.getSeconds()).padStart(2, "0");
 
-		if (!saveTime && saveToday !== `${year}.${month}.${date} ${todayLabel}`) {
-			time.textContent = `${hour}:${minute}:${second}`;
-			today.textContent = `${year}.${month}.${date} ${todayLabel}`;
-		} else {
+		//저장된 날짜가 오늘이랑 같으면
+		if (saveTime && saveToday === `${year}.${month}.${date} ${todayLabel}`) {
 			time.textContent = saveTime;
 			today.textContent = saveToday;
+		} else {
+			time.textContent = `${hour}:${minute}:${second}`;
+			today.textContent = `${year}.${month}.${date} ${todayLabel}`;
 		}
 	}
 
