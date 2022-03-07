@@ -1,11 +1,77 @@
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+@font-face {
+	font-family: "GmarketSansBold";
+	src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: "GmarketSansMedium";
+	src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+body {
+	font-family: "Noto Sans KR", sans-serif;
+	background: #f0efed;
+	color: #333;
+}
+
+.wrap {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 40rem;
+	max-width: calc(100% - 3rem);
+	padding: 2rem;
+	margin: 0 auto;
+	background: #fff;
+	border-radius: 1rem;
+	box-shadow: 2px 2px 50px rgba(0, 0, 0, 0.05);
+	border: 1px soid #ddd;
+}
+
+h1,
+h2 {
+	font-family: "GmarketSansMedium", sans-serif;
+}
+h1 {
+	font-size: 2rem;
+	padding-bottom: 1rem;
+	margin-bottom: 1rem;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	&::before {
+		content: "";
+		display: inline-block;
+		width: 5rem;
+		height: 5rem;
+		border-radius: 50%;
+		background: rgba(131, 85, 59, 0.1) url(../img/logo.svg) no-repeat 50% 50% / 80%;
+	}
+}
+h2 {
+	font-size: 1.6rem;
+	margin-bottom: 1rem;
+	display: flex;
+	gap: 0.8rem;
+	&::before {
+		content: "";
+		display: inline-block;
+		width: 0.4rem;
+		height: 0.8em;
+		background: #34c88a;
+	}
+}
+
 .time_wrap {
 	position: relative;
-	width: 40rem;
-	margin: 0 auto;
-
 	.waketime {
 		width: 100%;
-		height: 20rem;
+		height: 12rem;
 		border: 1px solid #eee;
 		background: #f9f9f9;
 		border-radius: 2rem;
@@ -13,16 +79,17 @@
 		align-items: center;
 		justify-content: center;
 		flex-direction: column;
-		font-size: 2rem;
+		font-size: 1.4rem;
 		gap: 1rem;
+		font-family: "GmarketSansMedium", sans-serif;
 
 		.time {
-			font-size: 4.2rem;
-			font-weight: bold;
+			font-size: 2em;
+			font-family: "GmarketSansBold", sans-serif;
 		}
 	}
 	.btn-check {
-		background: #9a91ec url(../img/camera.svg) no-repeat 50% 50% / 3rem;
+		background: #34c88a url(../img/camera.svg) no-repeat 50% 50% / 3rem;
 		width: 5rem;
 		height: 5rem;
 		border-radius: 50%;
@@ -30,5 +97,82 @@
 		bottom: 0;
 		left: 50%;
 		transform: translate(-50%, 50%);
+	}
+}
+
+.todo_wrap {
+	position: relative;
+	margin-top: 8rem;
+	.no-list {
+		text-align: center;
+		padding: 2rem;
+		border: 1px solid #eee;
+	}
+	ul {
+		li {
+			background: #f9f9f9;
+			border: 1px solid #eee;
+			border-radius: 0.4rem;
+			padding: 1rem;
+			margin: 0.8rem 0;
+			display: flex;
+			align-items: center;
+			gap: 0.4rem;
+			input[type="checkbox"]:checked + label {
+				color: #767676;
+				text-decoration: line-through;
+			}
+			label {
+				flex: 1;
+			}
+			.modify,
+			.apply,
+			.delete {
+				width: 3rem;
+				height: 3rem;
+
+				border-radius: 50%;
+			}
+			.modify {
+				background: #fff url(../img/edit.svg) no-repeat 50% 50% / 60%;
+			}
+			.apply {
+				background: #fff url(../img/check.svg) no-repeat 50% 50% / 60%;
+			}
+			.delete {
+				background: #fff url(../img/delete.svg) no-repeat 50% 50% / 60%;
+			}
+		}
+	}
+	form {
+		display: flex;
+		height: 4rem;
+		border: 2px solid #34c88a;
+		border-radius: 0.4rem;
+		overflow: hidden;
+		.todo-input {
+			flex: 1;
+			border: 0;
+			text-indent: 1rem;
+			&::placeholder {
+				color: #797979;
+			}
+		}
+		button {
+			font-family: "GmarketSansMedium", sans-serif;
+			background: #34c88a;
+			color: #fff;
+			width: 8rem;
+		}
+	}
+	.all-delete {
+		position: absolute;
+		top: -0.4rem;
+		right: 0;
+		color: #ff5065;
+		background: none;
+		border: 1px solid rgba(255, 80, 101, 0.2);
+		border-radius: 0.4rem;
+		padding: 0.4rem 1rem;
 	}
 }

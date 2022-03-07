@@ -5,19 +5,48 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>계피사탕</title>
-		<link rel="stylesheet" href="./css/default.css" />
+		<link rel="stylesheet" href="./css/reset.css" />
+		<link rel="stylesheet" href="./css/style.css" />
 		<script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
 	</head>
 	<body>
-		<h1>계피사탕</h1>
-		<section class="time_wrap">
-			<h2>기상시간</h2>
-			<div class="waketime">
-				<p class="today"></p>
-				<p class="time"></p>
-			</div>
-			<button class="btn-check"><span class="a11y-hidden">기상시간체크</span></button>
-		</section>
+		<div class="wrap">
+			<h1>계피사탕</h1>
+			<section class="time_wrap">
+				<h2>기상시간</h2>
+				<div class="waketime">
+					<p class="today"></p>
+					<p class="time"></p>
+				</div>
+				<button class="btn-check"><span class="a11y-hidden">기상시간체크</span></button>
+			</section>
+			<section class="todo_wrap">
+				<h2>오늘의 할일 목록</h2>
+				<button type="button" class="all-delete">모두지우기</button>
+				<p class="no-list">오늘의 할 일을 입력해주세요!</p>
+				<ul class="todo-list">
+					<li>
+						<input type="checkbox" id="chk1" />
+						<label for="chk1">오늘의 할일1</label>
+						<button type="button" class="modify"><span class="a11y-hidden">수정</span></button>
+						<button type="button" class="apply"><span class="a11y-hidden">적용</span></button>
+						<button type="button" class="delete"><span class="a11y-hidden">삭제</span></button>
+					</li>
+					<li>
+						<input type="checkbox" id="chk2" />
+						<label for="chk2">오늘의 할일2오늘의 할일2오늘의 할일2오늘의 할일2오늘의 할일2오늘의 할일2오늘의 할일2오늘의 할일2</label>
+						<button type="button" class="modify"><span class="a11y-hidden">수정</span></button>
+						<button type="button" class="apply"><span class="a11y-hidden">적용</span></button>
+						<button type="button" class="delete"><span class="a11y-hidden">삭제</span></button>
+					</li>
+					<form>
+						<label for="todo-input" class="a11y-hidden">오늘의 할일</label>
+						<input type="text" id="todo-input" class="todo-input" placeholder="오늘의 할 일을 입력하세요" />
+						<button type="submit">입력</button>
+					</form>
+				</ul>
+			</section>
+		</div>
 		<script src="./js/timeCapture.js"></script>
 	</body>
 </html>
