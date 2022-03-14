@@ -139,7 +139,7 @@ img {
 
 button {
 	cursor: pointer;
-	border: none;
+	border: 0;
 }
 
 a {
@@ -154,17 +154,7 @@ label {
 html {
 	font-size: 10px;
 }
+
 body {
 	font-size: 1.6rem;
-}
-
-.a11y-hidden {
-	overflow: hidden;
-	position: absolute;
-	clip: rect(0, 0, 0, 0);
-	width: 1px;
-	height: 1px;
-	margin: -1px;
-	border: 0;
-	padding: 0;
 }
