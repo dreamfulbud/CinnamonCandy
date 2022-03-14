@@ -1,0 +1,101 @@
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+@font-face {
+	font-family: "GmarketSansBold";
+	src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: "GmarketSansMedium";
+	src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+
+body {
+	font-family: "Noto Sans KR", sans-serif;
+	background: #f0efed;
+	color: #333;
+}
+
+.a11y-hidden {
+	overflow: hidden;
+	position: absolute;
+	clip: rect(0, 0, 0, 0);
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+}
+
+.wrap {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 40rem;
+	max-width: calc(100% - 3rem);
+	padding: 2rem;
+	margin: 0 auto;
+	background: #fff;
+	border-radius: 1rem;
+	box-shadow: 2px 2px 50px rgba(0, 0, 0, 0.05);
+	border: 1px soid #ddd;
+}
+
+h1,
+h2 {
+	font-family: "GmarketSansMedium", sans-serif;
+}
+h1 {
+	font-size: 2rem;
+	padding-bottom: 1rem;
+	margin-bottom: 1rem;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	&::before {
+		content: "";
+		display: inline-block;
+		width: 5rem;
+		height: 5rem;
+		border-radius: 50%;
+		background: rgba(131, 85, 59, 0.1) url(../img/logo.svg) no-repeat 50% 50% / 80%;
+	}
+}
+h2 {
+	font-size: 1.6rem;
+	margin-bottom: 1rem;
+	display: flex;
+	gap: 0.8rem;
+	&::before {
+		content: "";
+		display: inline-block;
+		width: 0.4rem;
+		height: 0.8em;
+		background: #34c88a;
+	}
+}
+
+.todo_wrap {
+	position: relative;
+	margin-top: 8rem;
+	.no-list {
+		text-align: center;
+		padding: 2rem;
+		border: 1px solid #eee;
+	}
+
+	.all-delete {
+		position: absolute;
+		top: -0.4rem;
+		right: 0;
+		color: #ff5065;
+		background: none;
+		border: 1px solid rgba(255, 80, 101, 0.2);
+		border-radius: 0.4rem;
+		padding: 0.4rem 1rem;
+	}
+}
