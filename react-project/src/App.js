@@ -4,24 +4,12 @@ import { Lists } from "./components/Lists";
 import { TimeCheck } from "./components/TimeCheck";
 import "./style/global.scss";
 
+const initialTodoData = localStorage.getItem("todoData") ? JSON.parse(localStorage.getItem("todoData")) : [];
 function App() {
-	const [todoData, setTodoData] = useState([
-		/*
-		{
-			id: "1",
-			content: "공부하기",
-			completed: true,
-		},
-		*/
-	]);
-
-	//로컬스토리지에서 불러오기
-	useEffect(() => {
-		const localTodoData = JSON.parse(localStorage.getItem("todoData"));
-		if (localTodoData.length !== 0) {
-			setTodoData(localTodoData);
-		}
-	}, []);
+	/* 데이터 형식
+		{	id: "1", content: "공부하기",	completed: true },
+	*/
+	const [todoData, setTodoData] = useState(initialTodoData);
 
 	//로컬스토리지에 저장하기
 	useEffect(() => {
